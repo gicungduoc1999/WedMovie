@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Trang HTML Mr D</title>
+    </head>
+    <style type="text/css">
+          body {
+            background-color: #555;
+            cursor: url("chuot.png"),auto ;  
+        }
+       
+        a :hover {
+          cursor: url("chuot1.png"),auto ;
+        }
+        
+        ul {
+            padding: 0;
+            background: ;
+        }
+         ul li a:hover {
+            color: #fff;
+            background: #939393;
+            cursor: url("chuot1.png"),auto ;
+        }
+
+        ul li ul.dropdown {
+            min-width: 100%;
+            /* Set width of the dropdown */
+            background: #333;
+            display: none;
+            position: absolute;
+            z-index: 999;
+            left: 0;
+        }
+        
+        ul li:hover ul.dropdown {
+            display: block;
+            /* Display the dropdown */
+        }
+        
+        ul li ul.dropdown li {
+            display: block;
+        }
+        #ulli {
+            display: inline-block;
+            position: relative;
+            line-height: 41px;
+            text-align: left;
+        }
+        #ul-li-a {
+            display: block;
+            padding: 8px 25px;
+            color: white;
+            text-decoration: none;
+        }
+        #header {
+            background-color: #333;
+        }
+         #diqua:hover {
+            color: #fff;
+            background: #939393;
+        }
+         #pos1 {
+            position: relative;
+            left: 150px;
+            top: -10px
+        }
+        #viendau{
+             background-color: #222;
+            color: white;
+            padding: 2px 20px;
+            padding-bottom: 5px;
+        }
+        #ulliphim {
+            display: inline-block;
+            position: relative;
+            line-height: 21px;
+            text-align: left;
+        }
+        /*chan*/
+        #vienchan {
+            border-width: 3px;
+            border-style: solid;
+            border-color: white;
+            width: 100%;
+            height: 0px;
+        }
+        
+        #chan {
+            background-color: #222;
+            color: white;
+            padding: 2px 20px;
+            padding-bottom: 5px;
+        }
+        
+        #chuchan {
+            list-style-type: none;
+            position: relative;
+            left: 80px;
+            margin: 20px;
+        }
+         /*-----------------------------CSS đăng nhập------------------------------------------------------------*/
+        
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+        /* Set a style for all buttons */
+        
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            cursor: url("chuot1.png"), auto;
+        }
+        
+        button:hover {
+            opacity: 0.8;
+        }
+        /* Extra styles for the cancel button */
+        
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+        /* Center the image and position the close button */
+        
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+        
+        img.avatar {
+            width: 40%;
+            border-radius: 50%;
+        }
+        
+        .container {
+            padding: 16px;
+        }
+        
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 1;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.4);
+            /* Black w/ opacity */
+            padding-top: 30px;
+        }
+        /* Modal Content/Box */
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 2% auto 10% auto;
+            /* 5% from the top, 15% from the bottom and centered */
+            border: 1px solid #888;
+            width: 40%;
+            /* Could be more or less, depending on screen size */
+        }
+        /* The Close Button (x) */
+        
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+        /* Add Zoom Animation */
+        
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+        
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* Change styles for span and cancel button on extra small screens */
+        
+        @media screen and (max-width: 300px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+/*--------------------------------------------------------------------------------------------*/
+    </style>
+<body>
+    <!------------------------------------Header---------------------------------------------------------------->
+<div id="header">
+
+        <table>
+
+            <tr>
+                <td>
+                    <a href="../../Home page/Home page.html"><img src="logo.png"></a>
+                </td>
+                <td>
+                    <ul>
+
+                        <li id="ulli"><a id="ul-li-a" id="diqua" href="../../PhimKhung/PhimKhung.html"><h2>Phim khủng</h2></a></li>
+                        <li id="ulli"><a id="ul-li-a" href="../../PhimBo/Phimbo.html"><h2>Phim Bộ</h2> </a></li>
+                        <li id="ulli">
+                            <a id="ul-li-a" href="../../Phimle/Phimle.html"><h2>Phim lẻ</h2>  </a>
+                            <ul class="dropdown">
+                                <li><a id="ul-li-a" href="../../Phimle/HanhDong/HangDong.html">Hàng Động</a></li>
+                                <li><a id="ul-li-a" href="../../Phimle/Hai/Hai.html">Hài</a></li>
+                                <li><a id="ul-li-a" href="../../Phimle/KinhDi/KinhDi.html">Kinh Dị</a></li>
+                                <li><a id="ul-li-a" href="../../Phimle/VienTuong/VienTuong.html">Viễn Tưởng</a></li>
+                            </ul>
+                        </li id="ulli">
+                        <li id="ulli"><a id="ul-li-a" href="../../GioiThieu/gioithieu.html"><h2>Giới Thiệu</h2> </a></li>
+                        <li id="ulli"><a id="ul-li-a" href="../../SapChieu/SapChieu.html"><h2>Sắp Chiếu</h2> </a> </li>
+                        <li></li>
+
+                    </ul>
+
+                </td>
+                <td>
+                   <!---------------------đăng nhập------------------------------------------------------------------------------>
+                    <div id="pos1"><a href="#" style="display: block;
+                    color: white;
+                    text-decoration: none;"><h1 onclick="document.getElementById('id01').style.display='block'" id="diqua">Đăng Nhập</h1></a></div>
+                    
+                    <div id="id01" class="modal">
+
+                        <form class="modal-content animate" >
+                            <div class="imgcontainer">
+                                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                                <img src="icons.png" alt="Avatar" style="height: 200px;width: 200px">
+                                <h1 style="color: #FF9933">Đăng Nhập PhimKhung</h1>
+                            </div>
+
+                            <div class="container">
+                                <label for="uname"><b>Tên Đăng Nhập</b></label>
+                                <input type="text" placeholder="Nhập tên đăng nhâp" name="uname" required>
+
+                                <label for="psw"><b>Mật Khẩu</b></label>
+                                <input type="password" placeholder="Nhập mật khẩu" name="psw" required>
+
+                                <button type="submit">Đăng Nhập</button>
+                                <label>
+                                    <input type="checkbox" checked="checked" name="remember">Nhớ đăng nhập
+                                </label>
+                            </div>
+
+                            <div class="container" style="background-color:#f1f1f1">
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                                <span class="psw"> <a href="#">Quên Mật Khẩu</a></span>
+                            </div>
+                        </form>
+                    </div>
+<!----------------------------het dang nhap------------------------------------------------------------------>
+                </td>
+
+            </tr>
+        </table>
+    </div>
+
+   <!-------------------------------------------------------------------------------------------------------------------->
+   <div style="border-width: 3px;
+    width: 100%;
+   height: 20px;">
+</div>
+<table align="center" border="0">
+
+        <tr>
+            <td colspan="3">
+
+                <img src="nen.png " style="height: 150px;width: 100%">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <h1 style="color: yellow" id="viendau">ALADDIN</h1> </td>
+        </tr>
+    </table>
+
+<table align="center" style="background-color: black;width: 80%">
+    <tr >
+        <td >
+
+            <iframe width="1200px" height="555" src="https://www.youtube.com/embed/ruE75y1Jg_s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </td>
+    </tr>
+    <tr>
+        <td style=>
+            <img src="1.png" >
+        </td>
+    </tr>
+    <tr>
+        <td >
+            <h3 style="color: white">Phim Aladdin Live Action 2019 là phiên bản chuyển thể do người đóng. Aladdin 2019 là phiên bản làm lại trực tiếp của bộ phim hoạt hình cùng tên năm 1992 của Disney, lần lượt dựa trên truyện dân gian cùng tên từ Nghìn lẻ một đêm.</h3>
+            
+         </h3>
+        </td>
+    </tr>
+    <tr>
+        <td style="height: 60px"></td>
+    </tr>
+    <tr>
+        <td><img src="back.jpg" style="width: 100%;left: 0px;position: relative;"></td>
+    </tr>
+    <tr>
+        <td style="height: 100px"></td>
+    </tr>
+</table>
+  
+  
+       
+  <!--------------------------------------------------------------------------------------------------------------->
+<div id="vienchan">
+        <p></p>
+    </div>
+        
+    <div id="chan" style="height: 350px">
+       <a href="../../Home page/Home page.html"><img style="position: relative;left: 90px" src="logo.png"></a>
+        <ul>
+            
+            <li id="chuchan">
+                <p>Mô Tả về Wed</p>
+            </li>
+            <li id="chuchan">
+                <p>Wed được làm bởi Mr D</p>
+                <p>Đại học FPT</p>
+                <p>Gamil:gicungduoc1999@gmail.com</p>
+                <p>Gmail:duongtthe130777@fpt.edu.vn</p>
+            </li>
+
+        </ul>
+
+        <ul style="top: -180px;left:  500px ; position: relative;list-style-type: none;">
+            <li><a href="../../PhimKhung/PhimKhung.html" style=" text-decoration: none;color: white"> Phim Khủng</a></li>
+            <li><a href="../../PhimBo/Phimbo.html" style=" text-decoration: none;color: white"> Phim Bộ</a></li>
+            <li><a href="../../Phimle/Phimle.html" style=" text-decoration: none;color: white"> Phim Lẻ</a></li>
+
+            <li><a href="../../Phimle/HanhDong/HangDong.html" style=" text-decoration: none;color: white ; position: relative;left: 20px"> +Phim Hàng Động</a></li>
+            <li><a href="../../Phimle/Hai/Hai.html" style=" text-decoration: none;color: white; position: relative;left: 20px"> +Phim Hài</a></li>
+            <li><a href="../../Phimle/KinhDi/KinhDi.html" style=" text-decoration: none;color: white; position: relative;left: 20px"> +Phim Kinh Dị</a></li>
+            <li><a href="../../Phimle/VienTuong/VienTuong.html" style=" text-decoration: none;color: white; position: relative;left: 20px"> +Phim Viễn Tưởng</a></li>
+            <li><a href="../../GioiThieu/gioithieu.html" style=" text-decoration: none;color: white"> Giới Thiệu</a></li>
+            <li><a href="../../SapChieu/SapChieu.html" style=" text-decoration: none;color: white"> Sắp Chiếu</a></li>
+        </ul>
+
+    </div>
+
+</body>
+</html>
